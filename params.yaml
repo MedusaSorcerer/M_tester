@@ -1,0 +1,32 @@
+title: M TEST
+version: 'v0.0.0'
+service: '127.0.0.1:8080'
+login: '/login'
+username: 'medusa'
+password: 'medusa'
+urls:
+    - title: '获取用户列表'
+      url: '/user'
+      method: 'GET'
+
+    - title: '新建用户'
+      url: '/user'
+      method: 'POST'
+      params: {"userName": "tester_100", "isActive": false}
+
+    - title: '用户激活'
+      url: '/user/active/{user_id}'
+      method: 'PUT'
+      params: {"isActive": true}
+      id:
+          user_id: '新建用户.POST.response.identity'
+
+    - title: '删除用户'
+      url: '/user/{user_id}'
+      method: 'DELETE'
+      id:
+          user_id: '新建用户.POST.response.identity'
+
+    - title: 'Logout'
+      url: '/user/logout'
+      method: 'GET'
