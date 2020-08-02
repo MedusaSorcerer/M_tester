@@ -81,7 +81,7 @@ def base_request(url, params, method):
 
 
 def get_token(response):
-    return 'jwt ' + response.json()['detail']['jdooootoken']
+    return 'jwt ' + response.json()['detail']['token']
 
 
 def login(url, params):
