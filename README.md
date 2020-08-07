@@ -70,7 +70,7 @@ params: '创建用户.POST.response'
 params: 
   username: '创建用户.POST.response.username'
 ```
-# 你也可以组建自定义对象
+你也可以组建自定义对象
 ```yaml
 # 传递已经请求的 title 为创建用户的响应数据中的 username 字段 和 自定义 a 字段
 params:
@@ -102,6 +102,18 @@ id:
 
 ### 样式配置
 CSS 文件位于 `docs/static/medusa.css` 路径下，并且已经在 `mkdocs.yml` 文件中注册，你想自定样式的话，可以修改该文件。
+
+### 启动
+启动的方式仅仅是将主要脚本文件运行即可：
+```shell script
+python3 medusa.py
+```
+
+### 测试
+在应对 `get_result_dict` 逻辑问题，我们还提供了测试文件 `mtester.py`，和运行方式一样，仅仅将脚本文件执行即可：
+```shell script
+python3 mtester.py
+```
 
 ### 其他
 `lib` 文件夹下是用于写入 makedown 文件中的模板文件：
